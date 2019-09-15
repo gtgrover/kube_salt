@@ -1,0 +1,3 @@
+2019-09-13 20:51:10,476 [py.warnings                :110 ][WARNING ][419] /usr/lib/python3.7/site-packages/salt/transport/ipc.py:292: DeprecationWarning: encoding is deprecated, Use raw=False instead.
+  self.unpacker = msgpack.Unpacker(encoding=encoding)
+
