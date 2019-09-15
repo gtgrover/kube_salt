@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  salt_master_data:
+    build: ./data
+    volumes:
+      - ./shared/etc:/etc/salt
+      - ./shared/var/salt/cache:/var/salt/cache
+      - ./shared/var/log/salt:/var/log/salt
+      - ./shared/srv:/srv
+
+  salt_master:
+    build: ./alpmas
+    volumes:
+      - ./shared/etc:/etc/salt
+      - ./shared/var/salt/cache:/var/salt/cache
+      - ./shared/var/log/salt:/var/log/salt
+      - ./shared/srv:/srv
+
+  salt_minion:
+    build: ./alpmin
